@@ -1,15 +1,17 @@
-Gem::Specification.new do |s|
-  s.name         = 'timepad-api-client'
-  s.version      = Timepad::VERSION
-  s.summary      = 'timepad api client'
-  s.description  = 'API client for timepad.ru'
-  s.author       = ['Natalia Maximenko']
-  s.email        = ['natali.maximenko@gmail.com']
-  s.homepage     = 'http://github.com/natali-maximenko/timepad-api-client'
-  s.license      = 'MIT'
+require File.expand_path('../lib/timepad/version', __FILE__)
 
-  s.files        = Dir["{lib}/**/*.rb", "*.md", '.rspec']
-  s.require_path = 'lib'
+Gem::Specification.new do |s|
+  s.name          = 'timepad-api-client'
+  s.version       = Timepad::VERSION
+  s.summary       = 'timepad api client'
+  s.description   = 'API client for timepad.ru'
+  s.author        = ['Natalia Maximenko']
+  s.email         = ['natali.maximenko@gmail.com']
+  s.homepage      = 'http://github.com/natali-maximenko/timepad-api-client'
+  s.license       = 'MIT'
+
+  s.files         = Dir["{lib}/**/*.rb", "*.md", '.rspec']
+  s.require_paths = ["lib"]
   s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^spec/})
 
