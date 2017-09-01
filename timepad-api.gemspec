@@ -1,10 +1,8 @@
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require File.expand_path('../lib/timepad/version', __FILE__)
+require File.expand_path('../lib/timepad-api/version', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name          = 'timepad-api-client'
-  s.version       = Timepad::VERSION
+  s.name          = 'timepad-api'
+  s.version       = TimepadApi::VERSION
   s.summary       = 'timepad api client'
   s.description   = 'API client for timepad.ru'
   s.author        = ['Natalia Maximenko']

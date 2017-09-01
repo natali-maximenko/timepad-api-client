@@ -1,4 +1,4 @@
-module Timepad
+module TimepadApi
   class Client
     API_URI = 'https://api.timepad.ru'
     VERSION = '1'
@@ -16,11 +16,11 @@ module Timepad
     end
 
     def event
-      @event ||= Timepad::Event.new(self)
+      @event ||= TimepadApi::Event.new(self)
     end
 
     def order
-      @order ||= Timepad::Order.new(self)
+      @order ||= TimepadApi::Order.new(self)
     end
 
   private

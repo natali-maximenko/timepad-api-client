@@ -1,4 +1,4 @@
-require 'timepad'
+require 'timepad-api'
 
 limit = 50
 start = 1
@@ -13,7 +13,7 @@ params = {
   access_statuses: 'private,draft,link_only,public',
   sort: 'starts_at'
 }
-api_client = Timepad::Client.new(ENV['TIMEPAD_TOKEN'])
+api_client = TimepadApi::Client.new(ENV['TIMEPAD_TOKEN'])
 
 begin
   sleep(3.0)

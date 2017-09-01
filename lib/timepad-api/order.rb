@@ -1,6 +1,6 @@
 require_relative 'client'
 
-module Timepad
+module TimepadApi
   class OrderStatus
     OK = 'ok' #(ок): бесплатный билет успешно заказан
     PAID = 'paid' #(оплачено): платный билет успешно оплачен он-лайн

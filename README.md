@@ -7,7 +7,7 @@ Use [API documentation](http://dev.timepad.ru/api/swagger-doc/)
 
 Add to Gemfile:
 
-    gem 'timepad'
+    gem 'timepad-api'
 
 Run:
 

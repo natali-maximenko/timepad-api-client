@@ -1,6 +1,6 @@
 require_relative 'client'
 
-module Timepad
+module TimepadApi
   class EventStatus
     PRIVATE = 'private'
     DRAFT = 'draft'
