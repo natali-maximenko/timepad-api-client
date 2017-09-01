@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name         = 'timepad'
+  s.name         = 'timepad-api-client'
   s.version      = '1.0.0'
   s.summary      = 'timepad api client'
   s.description  = 'API client for timepad.ru'
