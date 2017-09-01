@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name         = 'timepad-api-client'
-  s.version      = '1.0.0'
+  s.version      = Timepad::VERSION
   s.summary      = 'timepad api client'
   s.description  = 'API client for timepad.ru'
   s.author       = ['Natalia Maximenko']
