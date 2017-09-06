@@ -36,5 +36,14 @@ module TimepadApi
     def list(event_id, attrs = nil)
       response = @client.request "events/#{event_id}/orders", attrs
     end
+
+    # Get order by event_id and order_id
+    #
+    # @param [String] event_id
+    # @param [String] order_id
+    # @return [Hash]
+    def get(event_id, order_id)
+      @client.request "events/#{event_id}/orders/#{order_id}"
+    end
   end
 end
