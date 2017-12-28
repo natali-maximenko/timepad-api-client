@@ -1,8 +1,8 @@
 module TimepadApi
   class Client
-    API_URI = 'https://api.timepad.ru'
-    VERSION = '1'
-    FORMAT = 'json'
+    API_URI = 'https://api.timepad.ru'.freeze
+    VERSION = '1'.freeze
+    FORMAT = 'json'.freeze
     attr_reader :token
 
     def initialize(token = nil)
