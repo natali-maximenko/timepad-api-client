@@ -1,12 +1,11 @@
 module TimepadApi
   class Client
-    API_URI = 'https://api.timepad.ru'.freeze
-    VERSION = '1'.freeze
-    FORMAT = 'json'.freeze
-    attr_reader :token
+    attr_reader :token, :api_version, :data_format
 
-    def initialize(token = nil)
+    def initialize(token = nil, api_version = 1, data_format = 'json')
       @token = token unless token.nil?
+      @api_version = api_version
+      @data_format = data_format
     end
 
     def request(action, params = {})
@@ -29,9 +28,10 @@ module TimepadApi
     end
 
     def make_uri(action, params = {})
+      api_endpoint = 'https://api.timepad.ru'
       params.nil? ? params = {'token': @token} : params.merge!({'token': @token})
       query = make_query(params)
-      URI("#{API_URI}/v#{VERSION}/#{action}.#{FORMAT}?#{query}")
+      URI("#{api_endpoint}/v#{@api_version}/#{action}.#{@data_format}?#{query}")
     end
   end
 end
